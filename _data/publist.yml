@@ -1,3 +1,68 @@
+- title: "Pix2NPHM: Learning to Regress NPHM Reconstructions From a Single Image"
+  image: website_pix2nphm.png
+  description: Modern, data-driven approach to approach single-image 3D face reconstruction using ViT networks, pixel-aligned geonmetric pretraining and large scale mixed-2D-3D training.
+
+
+  authors:  Simon Giebenhain, Tobias Kirschstein, Liam Schoneveld,  Davide Davoli,  Zhe Chen,  Matthias Nießner
+  link:
+    url: https://simongiebenhain.github.io/Pix2NPHM/
+    display: Project Page
+  highlight: 1
+
+- title: "FlexAvatar: Learning Complete 3D Head Avatars with Partial Supervision"
+  image: website_flexavatar.png
+  description: Single-image 3DGS-based avatar prediction. Gaussian parameters are predicted in canonical space using a transformer, animation is learned using cross attention to Pixel3DMM estimated FLAME expression codes.
+
+
+  authors: Tobias Kirschstein, Simon Giebenhain, Matthias Nießner
+  link:
+    url: https://tobias-kirschstein.github.io/flexavatar/
+    display: Project Page
+  highlight: 1
+
+- title: "Pixel3DMM: Versatile Screen-Space Priors for Single-Image 3D Face Reconstruction"
+  image: website_pixel3dmm.png
+  description: 3DMM tracking using ViT predictions for pixel-aligned geometric cues, i.e. uv-coordinates and surface normals. Extreme generalization due to DINOv2 backbone.
+
+  authors:  Simon Giebenhain, Tobias Kirschstein,  Martin Rünz,  Lourdes Agapito, Matthias Nießner
+  link:
+    url: https://simongiebenhain.github.io/pixel3dmm/
+    display: Project Page
+  highlight: 1
+
+- title: "BecomingLit: Relightable Gaussian Avatars with Hybrid Neural Shading"
+  image: website_becominglit.png
+  description: Highest-quality publicly-available light stage data, and method to create relightable Gaussian avatars using a hypbrid between classical-CG and learned shading.
+
+
+  authors: Jonathan SChmidt, Simon Giebenhain, Matthias Nießner
+  link:
+    url: https://jonathsch.github.io/becominglit
+    display: Project Page
+  highlight: 1
+
+- title: "NPGA: Neural Parametric Gaussian Avata"
+  image: website_npga.png
+  description: High-quality, photo-realistic 3DGS-based avatars from multi-view video recordings, using MonoNPHM instead of FLAME.
+
+
+  authors: Simon Giebenhain, Tobias Kirschstein,  Martin Rünz,  Lourdes Agapito, Matthias Nießner
+  link:
+    url: https://simongiebenhain.github.io/NPGA/
+    display: Project Page
+  highlight: 1
+  
+- title: "Gghead: Fast and generalizable 3d gaussian heads"
+  image: website_gghead.png
+  description: EG3D-style GAN to predict 3DGS-parameters in UV-space, learned purely from 2D image collections with camera annotations
+
+
+  authors: Tobias Kirschstein, Simon Giebenhain, Jiapeng Tang, Markos Georgopoulos, Matthias Nießner
+  link:
+    url: https://tobias-kirschstein.github.io/gghead/
+    display: Project Page
+  highlight: 1
+  
 - title: "MonoNPHM: Dynamic Head Reconstruction from Monoculuar Videos"
   image: MonoNPHM.gif
   description: MonoNPHM is a neural parametric head model that disentangles geomery, appearance and facial expression into three separate latent spaces.
