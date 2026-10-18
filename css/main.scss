@@ -1,93 +1,121 @@
 ---
 ---
-    
-@import "bootstrap";
 
-img { margin-bottom: 24px; 
-     margin-top: 17px; 
-    border-radius:2%;
+/* Design tokens (light; dark overrides below) */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --card: #ffffff;
+  --text: #16181d;
+  --muted: #5b6270;
+  --line: #e6e8ec;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.06);
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1116;
+    --surface: #151a21;
+    --card: #151a21;
+    --text: #e8eaed;
+    --muted: #9aa3b0;
+    --line: #262c35;
+    --accent: #7aa7ff;
+    --accent-soft: rgba(122, 167, 255, 0.12);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
 }
 
-
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
-	padding-top: 70px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16.5px/1.65 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+img, video { max-width: 100%; display: block; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+strong { font-weight: 600; }
+h1, h2, h3 { line-height: 1.2; margin: 0; }
 
-figcaption {
-    text-align: right;
-    margin-top: -20px;
-    margin-bottom: 20px;
+.page { max-width: 920px; margin: 0 auto; padding: 72px 24px 40px; }
+
+/* Header */
+.hero { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; }
+.hero-photo img {
+  width: 100%; height: auto; aspect-ratio: 2740 / 3000; object-fit: cover;
+  border-radius: 20px; box-shadow: var(--shadow);
 }
-
-
-
-/* Top navigation bar */
-
-
-p.byline {
-	text-align: center;
-	font-size: 18px;
-	line-height: 36px;
-	margin-top: -24px;
-	margin-bottom: 48px;
+.hero h1 { font-size: clamp(2rem, 4.4vw, 2.75rem); font-weight: 700; letter-spacing: -0.025em; }
+.role { margin: 8px 0 20px; color: var(--muted); font-size: 1.05rem; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--card); color: var(--text);
+  font-size: 18px; transition: border-color .15s, color .15s, background .15s, transform .15s;
 }
+.links a .ai { font-size: 21px; }
+.links a:hover { text-decoration: none; color: var(--accent); border-color: var(--accent); background: var(--accent-soft); transform: translateY(-1px); }
 
-
-pubtit {
-	font-weight: bold;
+/* Sections */
+section { margin-top: 56px; }
+section h2 {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line);
 }
+.about p { margin: 0 0 14px; max-width: 70ch; }
 
-firstp {
+/* Publications */
+.publist { display: flex; flex-direction: column; gap: 18px; }
+.pub {
+  display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start;
+  padding: 18px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--card); box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
 }
-
-.container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1000px; /* or 950px */
+.pub:hover { transform: translateY(-2px); }
+.pub-media {
+  aspect-ratio: 2 / 1; border-radius: 10px; overflow: hidden;
+  background: #fff; border: 1px solid var(--line);
 }
-
-/* Home, News */
-#newsid p {
-	text-align: left;
+.pub-media img, .pub-media video { width: 100%; height: 100%; object-fit: contain; }
+.pub-body p { margin: 0 0 8px; }
+.pub-title { font-size: 1.06rem; font-weight: 600; letter-spacing: -0.01em; margin: 2px 0 6px; }
+.pub-authors { color: var(--muted); font-size: 0.92rem; }
+.pub-authors strong { color: var(--text); }
+.pub-desc { font-size: 0.95rem; }
+.pub-news1 { color: #c0392b; font-weight: 600; font-size: 0.92rem; }
+.pub-news2 { font-size: 0.92rem; color: var(--muted); }
+.pub-links { margin-top: 12px !important; }
+.pill {
+  display: inline-block; padding: 5px 14px; border-radius: 999px;
+  font-size: 0.86rem; font-weight: 500; color: var(--accent); background: var(--accent-soft);
 }
+.pill:hover { text-decoration: none; filter: brightness(0.95); }
 
-#homeidtmp h1 {
-	text-align: center;
+/* Footer */
+.site-footer { max-width: 920px; margin: 0 auto; padding: 28px 24px 48px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+.site-footer p { margin: 0; }
+.site-footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Other pages (404, about the website) */
+.post-title, #textid h1 { font-size: 1.8rem; margin-bottom: 16px; }
+
+@media (max-width: 720px) {
+  .page { padding-top: 40px; padding-inline: 16px; }
+  .hero { grid-template-columns: 1fr; gap: 20px; justify-items: start; }
+  .hero-photo { width: 160px; }
+  .pub { grid-template-columns: 1fr; gap: 14px; padding: 14px; }
+  .site-footer { padding-inline: 16px; }
 }
-
-#newsid img {
-	margin-top: 6px;
-	margin-bottom: 6px;
+@media (prefers-reduced-motion: reduce) {
+  .pub, .links a { transition: none; }
+  .pub:hover, .links a:hover { transform: none; }
 }
-
-/* Team & Publications */
-#gridid img { margin: 16px 22px 6px 0; border-radius:10%; box-shadow: 2px 2px 5px #888888 }
-#homeid img { margin: 0 0 0 0; border-radius:5%; box-shadow: 0px 0px 0px #888888 }
-#picid img { margin: 6px 3px 60px 6px; border-radius:1%; box-shadow: 2px 2px 5px #888888 }
-#gridid .row { margin-bottom: 24px; }
-
-
-/* Grid overrides */
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6,
-.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-	padding-left: 16px;
-	padding-right: 16px;
-}
-
-/* Grid overrides */
-.col-sm-4 {
-	padding-left: 26px;
-	padding-right: 26px;
-}
-
-
-/* Carusel */
-
-.carousel {
-    border-radius: 3px 3px 3px 3px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-

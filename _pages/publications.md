@@ -1,34 +1,25 @@
-# Publications
+<h2>Publications</h2>
 
-{% assign number_printed = 0 %}
+<div class="publist">
 {% for publi in site.data.publist %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
 {% if publi.highlight == 1 %}
-
-<div class="row">
-
-<div class="well col-sm-18 clearfix">
-  <div class="col-sm-4">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="100%" style="float: left; padding-right: 10px" />
-  </div>
-  <div class="col-sm-8">
-  <pubtit>{{ publi.title }}</pubtit>
-  <p>{{ publi.description }}</p>
-  <p><em>{{ publi.authors }}</em></p>
-  <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
-  <p class="text-danger"><strong> {{ publi.news1 }}</strong></p>
-  <p> {{ publi.news2 }}</p>
-  </div>
+<article class="pub">
+<div class="pub-media">
+{% if publi.image contains '.mp4' %}
+<video src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ publi.title | escape }}"></video>
+{% else %}
+<img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" alt="{{ publi.title | escape }}" loading="lazy">
+{% endif %}
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
+<div class="pub-body">
+<h3 class="pub-title">{{ publi.title }}</h3>
+<p class="pub-authors">{{ publi.authors | replace: "Simon Giebenhain", "<strong>Simon Giebenhain</strong>" }}</p>
+<p class="pub-desc">{{ publi.description }}</p>
+{% if publi.news1 %}<p class="pub-news1">{{ publi.news1 }}</p>{% endif %}
+{% if publi.news2 %}<p class="pub-news2">{{ publi.news2 }}</p>{% endif %}
+<p class="pub-links"><a class="pill" href="{{ publi.link.url }}">{{ publi.link.display }}</a></p>
 </div>
-
-
+</article>
 {% endif %}
 {% endfor %}
-
-
-<p> &nbsp; </p>
+</div>

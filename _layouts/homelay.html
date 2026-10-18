@@ -1,31 +1,30 @@
 ---
 layout: default
 ---
-   
-<div class="row">
-  <div class="col-lg-8 col-lg-push-4">
-		<h1>Simon Giebenhain <td>
-        	 <a style="padding-left:10px;" href="mailto:simon.giebenhain@tum.de"><i class="fa fa-envelope-square" style="font-size: 1.em;"></i></a></li>
-		     <a style="padding-left:10px;" href="https://github.com/SimonGiebenhain"><i class="fa fa-github-square" style="font-size: 1.em;"></i></a></li>
-             <a style="padding-left:10px;" href="https://scholar.google.com/citations?&user=nhRzTtEAAAAJ"><i class="ai ai-google-scholar-square" style="font-size: 1.em;"></i></a></li>
-             <a style="padding-left:10px;" href="https://twitter.com/SGiebenhain"><i class="fa fa-twitter-square" style="font-size: 1.em;"></i></a></li>
-             <a style="padding-left:10px;" href="docs/cv_simon_giebenhain.pdf"><i class="ai ai-cv-square" style="font-size: 1.em;"></i></a></li>
-             </td></h1> 
-		PhD Student, Technical University of Munich
-		
-		<h2> About Me </h2>
-	{{ content }}
-	
+
+<header class="hero">
+  <div class="hero-photo">
+    {% include bio.html %}
   </div>
-    <div class="col-lg-4 col-lg-pull-8" >
-		{% include bio.html %}
-  </div> 
-</div>
-<div class="row">
-<div class="col-sm-12">
-	{% capture my_include %}{% include_relative publications.md %}{% endcapture %}
-	{{ my_include | markdownify }}
-</div>
-</div>
-  
-  
+  <div class="hero-text">
+    <h1>Simon Giebenhain</h1>
+    <p class="role">PhD Student, Technical University of Munich</p>
+    <nav class="links" aria-label="Contact and profiles">
+      <a href="mailto:simon.giebenhain@tum.de" aria-label="Email" title="Email"><i class="fa fa-envelope"></i></a>
+      <a href="https://github.com/SimonGiebenhain" aria-label="GitHub" title="GitHub"><i class="fa fa-github"></i></a>
+      <a href="https://scholar.google.com/citations?&user=nhRzTtEAAAAJ" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://twitter.com/SGiebenhain" aria-label="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a href="docs/cv_simon_giebenhain.pdf" aria-label="CV" title="CV"><i class="ai ai-cv"></i></a>
+    </nav>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About Me</h2>
+  {{ content }}
+</section>
+
+<section class="publications">
+  {% capture my_include %}{% include_relative publications.md %}{% endcapture %}
+  {{ my_include | markdownify }}
+</section>
