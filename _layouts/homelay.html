@@ -2,29 +2,26 @@
 layout: default
 ---
 
-<header class="hero">
-  <div class="hero-photo">
-    {% include bio.html %}
-  </div>
+<section class="hero" id="about">
   <div class="hero-text">
+    <p class="kicker">PhD Student, Technical University of Munich</p>
     <h1>Simon Giebenhain</h1>
-    <p class="role">PhD Student, Technical University of Munich</p>
+    <div class="about">
+      {{ content }}
+    </div>
     <nav class="links" aria-label="Contact and profiles">
-      <a href="mailto:simon.giebenhain@tum.de" aria-label="Email" title="Email"><i class="fa fa-envelope"></i></a>
-      <a href="https://github.com/SimonGiebenhain" aria-label="GitHub" title="GitHub"><i class="fa fa-github"></i></a>
-      <a href="https://scholar.google.com/citations?&user=nhRzTtEAAAAJ" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-      <a href="https://twitter.com/SGiebenhain" aria-label="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
-      <a href="docs/cv_simon_giebenhain.pdf" aria-label="CV" title="CV"><i class="ai ai-cv"></i></a>
+      <a class="btn btn-solid" href="mailto:simon.giebenhain@tum.de"><i class="fa fa-envelope"></i>Email</a>
+      <a class="btn" href="https://github.com/SimonGiebenhain"><i class="fa fa-github"></i>GitHub</a>
+      <a class="btn" href="https://scholar.google.com/citations?&user=nhRzTtEAAAAJ"><i class="ai ai-google-scholar"></i>Scholar</a>
+      <a class="btn" href="https://twitter.com/SGiebenhain"><i class="fa fa-twitter"></i>Twitter</a>
+      <a class="btn" href="docs/cv_simon_giebenhain.pdf"><i class="fa fa-file-text-o"></i>CV</a>
     </nav>
   </div>
-</header>
-
-<section class="about">
-  <h2>About Me</h2>
-  {{ content }}
+  <figure class="hero-photo">
+    {% include bio.html %}
+  </figure>
 </section>
 
-<section class="publications">
-  {% capture my_include %}{% include_relative publications.md %}{% endcapture %}
-  {{ my_include | markdownify }}
+<section class="publications" id="publications">
+  {% include publist.html %}
 </section>

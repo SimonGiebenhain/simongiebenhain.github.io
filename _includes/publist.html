@@ -1,0 +1,29 @@
+{% assign shown = site.data.publist | where: "highlight", 1 %}
+<div class="sec-head">
+  <h2>Publications</h2>
+  <span class="count">{{ shown | size }} papers</span>
+</div>
+
+<div class="pubgrid">
+  {% for publi in shown %}
+  <article class="pub">
+    <div class="pub-media">
+      <a href="{{ publi.link.url }}" aria-label="{{ publi.title | escape }}">
+        {% if publi.image contains '.mp4' %}
+        <video src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" autoplay muted loop playsinline preload="metadata"></video>
+        {% else %}
+        <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" alt="" loading="lazy">
+        {% endif %}
+      </a>
+    </div>
+    <div class="pub-body">
+      <h3 class="pub-title"><a href="{{ publi.link.url }}">{{ publi.title }}</a></h3>
+      <p class="pub-authors">{{ publi.authors | replace: "Simon Giebenhain", "<strong>Simon Giebenhain</strong>" }}</p>
+      <p class="pub-desc">{{ publi.description }}</p>
+      {% if publi.news1 %}<div class="pub-note pub-note-strong">{{ publi.news1 | markdownify }}</div>{% endif %}
+      {% if publi.news2 %}<div class="pub-note">{{ publi.news2 | markdownify }}</div>{% endif %}
+      <a class="pub-link" href="{{ publi.link.url }}">{{ publi.link.display }}<span aria-hidden="true">&nbsp;&#8599;</span></a>
+    </div>
+  </article>
+  {% endfor %}
+</div>

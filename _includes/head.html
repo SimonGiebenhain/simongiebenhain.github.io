@@ -7,12 +7,12 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/images/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/fonts/academicons-1.9.1/css/academicons.min.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}/fonts/academicons-1.9.1/css/academicons.min.css">
   <meta name="google-site-verification" content="b-w3kUcgVZH-Uj5nH153e5cY4O0cIj-A7VxQuz6TRow" />
 {% if jekyll.environment == 'production' %}
 {% include analytics.html %}
