@@ -58,6 +58,8 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 
 .page { max-width: var(--wrap); margin: 0 auto; padding: 0 32px; }
 
+.ai-hl { color: var(--accent); }
+
 /* hero */
 .hero {
   display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 72px; align-items: center;
