@@ -1,5 +1,5 @@
 - title: "Pix2NPHM: Learning to Regress NPHM Reconstructions From a Single Image"
-  image: website_pix2nphm2.png
+  image: website_pix2nphm2.webp
   description: Modern, data-driven approach to approach single-image 3D face reconstruction using ViT networks, pixel-aligned geonmetric pretraining and large scale mixed-2D-3D training.
 
 
@@ -10,7 +10,7 @@
   highlight: 1
 
 - title: "FlexAvatar: Learning Complete 3D Head Avatars with Partial Supervision"
-  image: website_flexavatar2.png
+  image: website_flexavatar2.webp
   description: Single-image 3DGS-based avatar prediction. Gaussian parameters are predicted in canonical space using a transformer, animation is learned using cross attention to Pixel3DMM estimated FLAME expression codes.
 
 
@@ -21,7 +21,7 @@
   highlight: 1
 
 - title: "Pixel3DMM: Versatile Screen-Space Priors for Single-Image 3D Face Reconstruction"
-  image: website_pixel3dmm2.png
+  image: website_pixel3dmm2.webp
   description: 3DMM tracking using ViT predictions for pixel-aligned geometric cues, i.e. uv-coordinates and surface normals. Extreme generalization due to DINOv2 backbone.
 
   authors:  Simon Giebenhain, Tobias Kirschstein,  Martin Rünz,  Lourdes Agapito, Matthias Nießner
@@ -31,7 +31,7 @@
   highlight: 1
 
 - title: "BecomingLit: Relightable Gaussian Avatars with Hybrid Neural Shading"
-  image: website_becominglit2.png
+  image: website_becominglit2.webp
   description: Highest-quality publicly-available light stage data, and method to create relightable Gaussian avatars using a hypbrid between classical-CG and learned shading.
 
 
@@ -42,7 +42,7 @@
   highlight: 1
 
 - title: "NPGA: Neural Parametric Gaussian Avata"
-  image: website_npga2.png
+  image: website_npga2.webp
   description: High-quality, photo-realistic 3DGS-based avatars from multi-view video recordings, using MonoNPHM instead of FLAME.
 
 
@@ -53,7 +53,7 @@
   highlight: 1
   
 - title: "Gghead: Fast and generalizable 3d gaussian heads"
-  image: website_gghead2.png
+  image: website_gghead2.webp
   description: EG3D-style GAN to predict 3DGS-parameters in UV-space, learned purely from 2D image collections with camera annotations
 
 
@@ -64,7 +64,7 @@
   highlight: 1
   
 - title: "MonoNPHM: Dynamic Head Reconstruction from Monoculuar Videos"
-  image: MonoNPHM.gif
+  image: MonoNPHM.mp4
   description: MonoNPHM is a neural parametric head model that disentangles geomery, appearance and facial expression into three separate latent spaces.
                 Using MonoNPHM as a prior, we tackle the task of dynamic 3D head reconstruction from monocular RGB videos, using inverse, SDF-based, volumetric rendering.
 
@@ -76,7 +76,7 @@
   highlight: 1
 
 - title: "DiffusionAvatars: Deferred Diffusion for High-fidelity 3D Head Avatars"
-  image: DiffusionAvatars.gif
+  image: DiffusionAvatars.mp4
   description: DiffusionAvatar uses diffusion-based, deferred neural rendering to translate geometric cues from an underlying neural parametric head model (NPHM) to photo-realistic renderings. 
                 The underlying NPHM prvides accurate control over facial expressions, while the deferred neural rendering leverages the 2D prior of StableDiffusion, in order to generate compeeling images.
 
@@ -87,7 +87,7 @@
   highlight: 1
   
 - title: "NeRSemble: Multi-view Radiance Field Reconstruction of Human Heads"
-  image: nersemble.mp4
+  image: nersemble_web.mp4
   description: NeRSemble reconstructs high-fidelity dynamic-radiance fields of human heads.
                 We combine a deformation for coarse movments with an ensemble of 3D multi-resolution hash encodings, which act as a form of expression dependent volumetric texture that models fine-grained, expression-depndent details.
                 Additionally we propose a new 16 camera multi-view capture dataset (7.1 MP resolution and 73 frames per second) containing 4700 sequences of more than 220 human subjects. 
@@ -98,7 +98,7 @@
   highlight: 1
   
 - title: "Learning Neural Parametric Head Models"
-  image: nphm.gif
+  image: nphm.mp4
   description: NPHM is a field-based Neural parametric model for human heads, 
                that represents identity geometry implicitly in a cononical space and models expressions as forward deformations.
                The SDF in canonical field is represented as an ensemble of local MLPs centered around facial anchor points.
@@ -110,7 +110,7 @@
   highlight: 1
   
 - title: "Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes"
-  image: nepu.gif
+  image: nepu.mp4
   description: In Neural Puppeteer (NePu) we explore single-evaluation-per-pixel neural rendering for dynamic objects. 
                 In particular we learn a latent space that relates the 3D pose of an object with multiple renderable properties, such as occupancy masks, color and depth.
                 The fast rendering speed allows us to tackle 3D keypoint detection by inverse rendering from multi-view sillhouettes.
@@ -123,7 +123,7 @@
   news2: More information on our  [Project Page](https://urs-waldmann.github.io/NePu/).
   
 - title: "AIR-Nets: An Attention-Based Framework for Locally Conditioned Implicit Representations"
-  image: anim.gif
+  image: anim.mp4
   description: AIR-Net is the first encoder-based, grid-free, local and implicit shape representation model.
                 Our network design focuses on conformity with geometric properties like 
                 permutation invariance and translation equivariance of the point cloud. 
@@ -138,7 +138,7 @@
   news2: Code available  [here](https://github.com/SimonGiebenhain/AIR-Nets).
 
 - title: "Radar Ghost Target Detection via Multimodal Transformers"
-  image: iros21.png
+  image: iros21.webp
   description: The safety of autonmous vehicles is heavily dependent on the reliability of its underlying sensor measurements.
                 While radar is often overlooked, its all-day, all-weather and long-range capabilities, as well as, low price render it a promising candidate.
                 In this paper we introduce an attention based sensor-fusion method, to filter out false-positive detections (so called ghost targets) in radar.
