@@ -62,7 +62,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 
 /* hero */
 .hero {
-  display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 72px; align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 64px; align-items: center;
   padding: 88px 0 96px;
 }
 .kicker { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
@@ -74,11 +74,11 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
   font-size: 1rem; color: var(--ink); background: var(--accent-soft);
   border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 14px 18px; margin-top: 26px;
 }
-.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 30px; }
 .btn {
-  display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 15px;
+  display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 13px;
   border-radius: 999px; border: 1px solid var(--line); background: var(--chip); color: var(--ink);
-  font-size: 0.88rem; font-weight: 500; transition: border-color .15s, transform .15s, background .15s;
+  font-size: 0.86rem; font-weight: 500; transition: border-color .15s, transform .15s, background .15s;
 }
 .btn i { font-size: 1.05rem; width: 1.1em; text-align: center; }
 .btn .ai { font-size: 1.2rem; }
