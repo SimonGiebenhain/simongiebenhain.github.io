@@ -1,3 +1,13 @@
+- title: "Video Diffusion Avatars: Taming Video Diffusion Models into Controllable 3D Avatars"
+  image: vda.mp4
+  description: "Can video diffusion models (VDMs) replace 3D avatars? Video Diffusion Avatars (VDA) creates photo-realistic avatars from a single image, with full control over camera viewpoint, facial expressions and upper-body pose. Unlike prevailing 3D avatar methods, which commonly rely on 3DGS/NeRF, our VDM-rendering produces physically plausible dynamics of hair and earrings, as well as complex light interactions like shadows, reflections and refractions."
+  authors: Simon Giebenhain, Tobias Kirschstein, Liam Schoneveld, Davide Davoli, Zhe Chen, Matthias Nießner
+  link:
+    url: https://simongiebenhain.github.io/video-diffusion-avatars/
+    display: Project Page
+  news2: "[arXiv](https://arxiv.org/abs/2610.23772) · [Code](https://github.com/SimonGiebenhain/video-diffusion-avatars/) · [Video](https://youtu.be/llai-LGR6DI)"
+  highlight: 1
+
 - title: "Pix2NPHM: Learning to Regress NPHM Reconstructions From a Single Image"
   image: website_pix2nphm2.webp
   description: Modern, data-driven approach to approach single-image 3D face reconstruction using ViT networks, pixel-aligned geonmetric pretraining and large scale mixed-2D-3D training.
